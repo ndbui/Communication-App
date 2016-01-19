@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>AAC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="Lib/jquery.mobile.custom.js"></script>  
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="Lib/howler.js"></script>
+	<script src="Lib/soundManager/soundmanager2.js"></script>
+    <script src="Lib/require.js" data-main="controls"></script>
+	<style>
+		html,
+		body {
+		  height: 100%;
+		}
+
+		#wrap {
+		  min-height: 100%;
+		  height: 100%;
+		  /* Negative indent footer by its height */
+		  margin: 0 auto -100px 0;
+		  /* Pad bottom by footer height */
+		  padding: 0 0 100px 0;
+		}
+
+
+		.center-container {
+		  height:100%;
+		  display: table;
+		  width:100%;
+		  margin:0;
+		}
+
+		.center-row {
+		  height:50%;
+		  width:100%;
+		  display: table-row;
+		}
+		  
+		.center-row > div {
+		  height:100%;
+		  width:50%;
+		  display: table-cell;
+		  
+		  color:#fff;
+		  vertical-align:middle;
+		}
+
+		.bg-one {
+		  background-image:url('');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+
+		}
+		.bg-two {
+		  background-image:url('');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+		}
+		.bg-three {
+		  background-image:url('');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+		}
+		.bg-four {
+		  background-image:url('');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+		}
+
+		.btn-xlarge {
+		    padding: 18px 28px;
+		    font-size: 2vw;
+		    line-height: normal;
+		    -webkit-border-radius: 8px;
+		       -moz-border-radius: 8px;
+		            border-radius: 8px;
+		}
+		
+		.checkMark {
+			position:absolute;
+			bottom:0;
+			right:0;
+			padding-right:12px;
+			padding-bottom:8px;
+		}
+		
+		
+		
+	</style>
+</head>
+<body>
+	<!-- Wrap all page content here -->
+<div id="wrap">
+  
+ 
+  <!-- Begin page content -->
+  <div class="center-container">
+    <div class="center-row">
+      <div id="img1" class="col-xs-6 bg-one text-center">
+      	  <img id="check1" class="checkMark" src=""><img>
+      </div>
+      <div id = "img2" class="col-xs-6 bg-two text-center">
+      	  <img id="check2" class="checkMark" src=""><img>
+      </div>
+    </div>
+    <div class="center-row">
+      <div id="img3" class="col-xs-6 bg-three text-center">
+          <img id="check3" class="checkMark" src=""><img>
+      </div>
+      <div id="img4" class="col-xs-6 bg-four text-center">
+          <img id="check4" class="checkMark" src=""><img>
+      </div>
+    </div>
+  </div>
+</div>
+<audio id="mySound"></audio>
+
+<div id="footer">
+  <div class="container">
+    
+    <button id="btnRecord" type="button" class="btn btn-default btn-xlarge" >Record</button>
+    <button id="btnStopRecord" type="button" class="btn btn-default btn-xlarge" >Stop Recording</button>
+    <button id="btnPlay" type="button" class="btn btn-default btn-xlarge" >Play</button>
+    <button id="btnSave" type="button" class="btn btn-default btn-xlarge">Save</button>
+
+    <button id="btnDel" type="button" class="btn btn-default btn-xlarge">Delete</button>   
+    
+    <!--form action="" enctype="multipart/form-data" onsubmit="return TestFunction()">
+    	<input type="file" id="file" name="files2[]" class="btn xlarge" multiple="multiple" accept="image/*;capture=camera" style="display: inline;"></input>
+  		<button type="submit" id="btnUpload" value="Upload!" style="display: inline;">Upload</button>
+  	</form> -->
+  	<form enctype="multipart/form-data"  method="post">
+	    <input name="file[]" type="file" class="btn xlarge" multiple="multiple" accept="image/*;capture=camera" style="display: inline;" id="uploadFiles"/>
+	    <input type="button" value="Upload File" id="btnUpload"/>
+	</form>
+  	
+  </div>
+</div>
+
+</body>

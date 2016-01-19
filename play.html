@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>AAC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="Lib/jquery.mobile.custom.js"></script>  
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="Lib/howler.js"></script>
+    <script src="Lib/require.js" data-main="playControls"></script>
+	<style>
+		html,
+		body {
+		  height: 100%;
+		}
+
+		#wrap {
+		  min-height: 100%;
+		  height: 100%;
+		  /* Negative indent footer by its height */
+		  margin: 0 auto -82px 0;
+		  /* Pad bottom by footer height */
+		  padding: 0 0 100px 0;
+		}
+
+
+		.center-container {
+		  height:100%;
+		  display: table;
+		  width:100%;
+		  margin:0;
+		}
+
+		.center-row {
+		  height:50%;
+		  width:100%;
+		  display: table-row;
+		}
+		  
+		.center-row > div {
+		  height:100%;
+		  width:50%;
+		  display: table-cell;
+		  
+		  color:#fff;
+		  vertical-align:middle;
+		}
+
+		.bg-one {
+		  background-image:url('Images/Image1.jpg');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+
+		}
+		.bg-two {
+		  background-image:url('Images/Image2.jpg');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+		}
+		.bg-three {
+		  background-image:url('Images/Image3.jpg');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+		}
+		.bg-four {
+		  background-image:url('Images/Image4.jpg');
+		  background-repeat: no-repeat;
+		  background-size:100% 100%;
+		  background-position: center; 
+		  border:5px solid black;
+		}
+
+		.btn-xlarge {
+		    padding: 18px 28px;
+		    font-size: 30px;
+		    line-height: normal;
+		    -webkit-border-radius: 8px;
+		       -moz-border-radius: 8px;
+		            border-radius: 8px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<!-- Wrap all page content here -->
+<div id="wrap">
+  
+ 
+  <!-- Begin page content -->
+  <div class="center-container">
+    <div class="center-row">
+      <div id="img1" class="col-xs-6 bg-one text-center"></div>
+      <div id = "img2" class="col-xs-6 bg-two text-center"></div>
+    </div>
+    <div class="center-row">
+      <div id="img3" class="col-xs-6 bg-three text-center"></div>
+      <div id="img4" class="col-xs-6 bg-four text-center"></div>
+    </div>
+  </div>
+</div>
+<audio id="mySound"></audio>
+</body>
